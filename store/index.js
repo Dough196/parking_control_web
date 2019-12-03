@@ -1,11 +1,11 @@
 export const getters = {
   loggedIn(state) {
-    return state.loggedIn
+    return state.auth.loggedIn
   },
   user(state) {
-    return state.user
+    return state.auth.user
   },
   strategy(state) {
-    return state.strategy
+    return state.auth.strategy
   }
 }
