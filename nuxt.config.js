@@ -51,7 +51,7 @@ export default {
     strategies: {
       local: {
         endpoints: {
-          login: { url: 'login', method: 'post'},
+          login: { url: 'login', method: 'post', propertyName: 'data.api_token'},
           logout: false,
           user: { url: 'user', method: 'get', propertyName: 'data' }
         }

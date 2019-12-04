@@ -1,75 +1,77 @@
 <template>
   <div class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        parking_control_web
-      </h1>
-      <h2 class="subtitle">
-        Control de estacionamiento 
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
+    <div class="card">
+      <h5 class="card-header">Featured</h5>
+      <div class="card-body">
+        <div v-if="user.nombre || user.apellidos">
+          <b>Nombres</b>
+          <p>{{ user.nombres + ' ' + user.apellidos }}</p>
+        </div>
+        <div v-if="user.carnet">
+          <b>Carnet</b>
+          <p>{{ user.carnet }}</p>
+        </div>
+        <div v-if="user.email">
+          <b>E-mail</b>
+          <p>{{ user.email }}</p>
+        </div>
+        <div v-if="user.num_placa">
+          <b>Placa</b>
+          <p>{{ user.num_placa }}</p>
+        </div>
+        <div v-if="user.reservas.length">
+          <b>Reservas</b>
+          <div class="list-group">
+            <div v-for="reserva in user.reservas" :key="reserva.id" class="list-group-item">
+              <h5 class="mb-1">{{ reserva.edificios[0].nombre }}</h5>
+              <p v-for="horario in reserva.horarios" :key="horario.id" class="mb-1">
+                <b>Día:</b>
+                {{ horario.dia }}
+                <b>Hora de entrada:</b>
+                {{ horario.hora_entrada }}
+                <b>Hora de salida:</b>
+                {{ horario.hora_salida }}
+              </p>
+            </div>
+            <!-- <a href="#" class="list-group-item list-group-item-action active">
+              <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">List group item heading</h5>
+                <small>3 days ago</small>
+              </div>
+              <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+              <small>Donec id elit non mi porta.</small>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">
+              <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">List group item heading</h5>
+                <small class="text-muted">3 days ago</small>
+              </div>
+              <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+              <small class="text-muted">Donec id elit non mi porta.</small>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">
+              <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">List group item heading</h5>
+                <small class="text-muted">3 days ago</small>
+              </div>
+              <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+              <small class="text-muted">Donec id elit non mi porta.</small>
+            </a> -->
+          </div>
+          
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
 
 export default {
-  components: {
-    Logo
-  },
-  mounted() {
-    console.log(this.user);
-  }
+  components: {},
+  mounted() {},
+  methods: {}
 }
 </script>
 
-<style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
-</style>
+<style></style>
