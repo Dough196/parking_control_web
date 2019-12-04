@@ -1,12 +1,13 @@
 <template>
+<div class="bg">  
+    <Cabecera></Cabecera>  
     <div class="container">
         <div class="d-flex justify-content-center h-100">
-            <div class="card">
+            <div class="card bg-login w-50">
                 <div class="card-header">
                     <div class="text-center pt-3">
                         <img src="~/assets/images/Logo.png" width="25%" alt="">
-
-                        <h4 class="mt-2">LOGIN</h4>
+                        <h4 class="mt-2 text-light">LOGIN</h4>
                     </div>
                 </div>
                 <div class="card-body">
@@ -21,21 +22,25 @@
                                         </i></span></div> <input v-model="contra" type="password" class="form-control" placeholder="password" required>
                         </div>
                         <!-- <div class="row align-items-center remember"> <input type="checkbox">Remember Me </div> -->
-                        <div class="form-group text-center"> <input type="submit" value="Ingresar" class="btn login_btn">
+                        <div class="form-group text-center"> <input type="submit" value="Ingresar" class="btn login_btn bg-boton text-white">
                         </div>
                     </form>
                 </div>
             </div>
         </div>
     </div>
+</div>
 </template>
 
+
 <script>
+import Cabecera from "../components/Cabecera.vue"
+
 export default {
     data() {
         return {
             usuario: 'admin@admin.com',
-            contra: 'password'
+            contra: 'password',
         }
     },
     methods: {
@@ -56,10 +61,37 @@ export default {
                     alert('Invalid credentials')
                 })
         }
+    },
+    components: {
+        Cabecera
     }
 }
 </script>
 
 <style>
+    .bg-boton {
+        background: #98094d;
+        padding: 5dp;
+        border: #FFFFFF solid 1px;
 
+    }
+
+    .bg-login {
+        background: #7711447e;
+    }
+
+    .bg {
+          /* The image used */
+        background-image: url("../assets/images/bgLogin.jpg");
+
+        /* Full height */
+        height: 100%;
+        width: 100%;
+
+        /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+    }
 </style>
