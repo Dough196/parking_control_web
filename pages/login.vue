@@ -56,7 +56,7 @@ export default {
                 })
                 .then(() => {
                     this.$router.push({
-                        path: '/admin'
+                        path: '/'
                     })
                 })
                 .catch(() => {

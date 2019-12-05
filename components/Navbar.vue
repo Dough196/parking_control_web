@@ -32,7 +32,7 @@
                     un problema, que al cerrar sesion dirige a pagina
                     no encontrada y despues redirige al login
                 -->
-                <a href="" class="text-white" @click="logout">Cerrar Sesion</a>
+                <a href="#" class="text-white" @click="logout">Cerrar Sesion</a>
             </li>
         </ul>
     </div>
