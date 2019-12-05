@@ -26,12 +26,6 @@
                 <a href="#" class="text-white">Link</a>
             </li>
             <li>
-                <!--
-                    href esta vacio porque se le agrega a la ruta
-                    todo lo que contenga este atributo, pero provoca
-                    un problema, que al cerrar sesion dirige a pagina
-                    no encontrada y despues redirige al login
-                -->
                 <a href="#" class="text-white" @click="logout">Cerrar Sesion</a>
             </li>
         </ul>
