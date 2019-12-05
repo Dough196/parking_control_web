@@ -1,5 +1,5 @@
 <template>
-<div>  
+<div>
   <!-- <Cabecera></Cabecera> -->
   <div class="container">
     <div class="card mt-5">
@@ -36,7 +36,7 @@
               </p>
             </div>
           </div>
-          
+
         </div>
       </div>
       <div class="card-footer">

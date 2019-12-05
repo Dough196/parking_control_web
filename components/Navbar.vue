@@ -2,7 +2,7 @@
 <div class="wrapper">
     <!-- Sidebar -->
     <nav id="sidebar">
-      <!-- <nav class="navbar navbar-expand-lg navbar-light">
+    <!-- <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container-fluid">
 
                 <button type="button" id="sidebarCollapse" class="btn btn-info">
@@ -10,11 +10,11 @@
                 </button>
             </div>
         </nav> -->
-    <div class="container mt-4">    
+    <div class="container mt-4">
         <div class="sidebar-header text-white">
             <h3>Bootstrap</h3>
         </div>
-    
+
         <ul class="list-unstyled components mt-3">
             <li>
                 <a href="#" class="text-white">Active</a>
@@ -29,21 +29,21 @@
                 <a href="#" class="text-white" @click="logout">Cerrar Sesion</a>
             </li>
         </ul>
-    </div>    
+    </div>
     </nav>
 </div>
 </template>
 
 <script>
 export default {
-  methods: {
-    async logout() {
-      await this.$auth.logout();
-      this.$router.push({
-        path: "/login"
-      });
+    methods: {
+        async logout() {
+            await this.$auth.logout();
+            this.$router.push({
+                path: "/login"
+            });
+        }
     }
-  }
 };
 </script>
 
