@@ -97,7 +97,7 @@ body {
     .bg {
 
         /* Full height */
-        height: 100%;
+        height: 100vh;
         width: 100%;
 
         /* Center and scale the image nicely */
