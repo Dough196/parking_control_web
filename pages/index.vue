@@ -1,7 +1,9 @@
 <template>
+<div>  
+  <!-- <Cabecera></Cabecera> -->
   <div class="container">
-    <div class="card">
-      <h5 class="card-header">Featured</h5>
+    <div class="card mt-5">
+      <h5 class="card-header bg-colorheader text-light">Featured</h5>
       <div class="card-body">
         <div v-if="user.nombre || user.apellidos">
           <b>Nombres</b>
@@ -63,15 +65,25 @@
       </div>
     </div>
   </div>
+</div>
 </template>
 
 <script>
+//import Cabecera from "../components/Cabecera.vue"
 
 export default {
-  components: {},
+  components: {
+    //Cabecera
+  },
   mounted() {},
   methods: {}
 }
 </script>
 
-<style></style>
+<style>
+  .bg-colorheader {
+    background: #98094D;
+
+  }
+
+</style>

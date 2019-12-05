@@ -1,7 +1,14 @@
 <template>
 <div class="bg">  
-    <Cabecera></Cabecera>  
+    <Cabecera></Cabecera> 
     <div class="container">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
         <div class="d-flex justify-content-center h-100">
             <div class="card bg-login w-50">
                 <div class="card-header">
@@ -69,6 +76,13 @@ export default {
 </script>
 
 <style>
+
+body {
+      /* The image used */
+    background-image: url("../assets/images/bgLogin.jpg");
+    justify-content: center;
+}
+
     .bg-boton {
         background: #98094d;
         padding: 5dp;
@@ -81,8 +95,6 @@ export default {
     }
 
     .bg {
-          /* The image used */
-        background-image: url("../assets/images/bgLogin.jpg");
 
         /* Full height */
         height: 100%;

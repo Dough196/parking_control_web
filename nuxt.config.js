@@ -60,7 +60,7 @@ export default {
   },
 
   router: {
-    // middleware: ['auth']
+    middleware: ['auth']
   },
   /*
   ** Axios module configuration
