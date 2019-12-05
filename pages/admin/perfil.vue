@@ -1,6 +1,5 @@
 <template>
 <div>
-    <!-- <Cabecera></Cabecera> -->
     <div class="container d-flex justify-content-center">
         <div class="card mt-5">
             <h5 class="card-header bg-colorheader text-light">Featured</h5>
@@ -42,11 +41,9 @@
 </template>
 
 <script>
-//import Cabecera from "../components/Cabecera.vue"
 
 export default {
     components: {
-        //Cabecera
     },
     mounted() {},
     methods: {

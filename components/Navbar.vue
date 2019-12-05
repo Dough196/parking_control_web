@@ -29,7 +29,7 @@
                 <a href="#" class="text-white">Link</a>
             </li>
             <li>
-                <font-awesome-icon :icon="['fas', 'singoutalt']" class="color-icon-sb" /><a href="#" class="text-white" @click="logout"> Cerrar Sesion</a>
+                <font-awesome-icon :icon="['fas', 'user']" class="color-icon-sb" /><a href="#" class="text-white" @click="logout"> Cerrar Sesion</a>
             </li>
         </ul>
     </div>
