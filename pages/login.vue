@@ -15,13 +15,12 @@
                 <div class="card-body">
                     <form @submit.prevent="login">
                         <div class="input-group form-group">
-                            <div class="input-group-prepend"> <span class="input-group-text"><i
-                                        class="fas fa-user"></i></span> </div> <input v-model="usuario" type="text" class="form-control" placeholder="username" required>
+                            <div class="input-group-prepend"><span class="input-group-text"><font-awesome-icon :icon="['fas', 'user']" class="color-icon"/></span> </div> 
+                            <input v-model="usuario" type="text" class="form-control" placeholder="username" required>
                         </div>
                         <div class="input-group form-group">
-                            <div class="input-group-prepend"> <span class="input-group-text"><i
-                                        class="fas fa-key">
-                                        </i></span></div> <input v-model="contra" type="password" class="form-control" placeholder="password" required>
+                            <div class="input-group-prepend"> <span class="input-group-text"><font-awesome-icon :icon="['fas', 'key']" class="color-icon" /></span></div> 
+                            <input v-model="contra" type="password" class="form-control" placeholder="password" required>
                         </div>
                         <!-- <div class="row align-items-center remember"> <input type="checkbox">Remember Me </div> -->
                         <div class="form-group text-center"> <input type="submit" value="Ingresar" class="btn login_btn bg-boton text-white">
@@ -100,5 +99,9 @@ body {
         background-repeat: no-repeat;
         background-size: cover;
 
+    }
+
+    .color-icon {
+        color: #98094d
     }
 </style>

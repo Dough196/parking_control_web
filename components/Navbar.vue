@@ -17,7 +17,7 @@
 
         <ul class="list-unstyled components mt-3">
             <li>
-                <a href="#" class="text-white">Active</a>
+                <font-awesome-icon :icon="['fas', 'user']" class="color-icon-sb" /><a href="#" class="text-white"> Ver Perfil</a>
             </li>
             <li>
                 <a href="#" class="text-white">Link</a>
@@ -62,6 +62,10 @@ export default {
     /* top layer */
     z-index: 9999;
     background: rgba(152, 9, 78, 0.774);
+}
+
+.color-icon-sb {
+    color: #ffff;
 }
 
 </style>
