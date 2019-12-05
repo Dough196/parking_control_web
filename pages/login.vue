@@ -1,6 +1,6 @@
 <template>
-<div class="bg">  
-    <Cabecera></Cabecera> 
+<div class="bg">
+    <Cabecera></Cabecera>
     <div class="container mt-5">
         <br>
         <br>
@@ -56,7 +56,7 @@ export default {
                 })
                 .then(() => {
                     this.$router.push({
-                        path: '/'
+                        path: '/admin'
                     })
                 })
                 .catch(() => {
@@ -99,6 +99,6 @@ body {
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        
+
     }
 </style>
