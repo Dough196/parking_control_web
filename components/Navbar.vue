@@ -12,12 +12,15 @@
         </nav> -->
     <div class="container mt-4">
         <div class="sidebar-header text-white">
-            <h3>Bootstrap</h3>
+            <h3>Administrador</h3>
         </div>
 
         <ul class="list-unstyled components mt-3">
             <li>
-                <font-awesome-icon :icon="['fas', 'user']" class="color-icon-sb" /><a href="#" class="text-white"> Ver Perfil</a>
+                <a href="#" class="text-white"> Inicio</a>
+            </li>
+            <li>
+                <a href="#" class="text-white"> Ver Perfil</a>
             </li>
             <li>
                 <a href="#" class="text-white">Link</a>
@@ -26,7 +29,7 @@
                 <a href="#" class="text-white">Link</a>
             </li>
             <li>
-                <a href="#" class="text-white" @click="logout">Cerrar Sesion</a>
+                <font-awesome-icon :icon="['fas', 'singoutalt']" class="color-icon-sb" /><a href="#" class="text-white" @click="logout"> Cerrar Sesion</a>
             </li>
         </ul>
     </div>
