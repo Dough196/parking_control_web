@@ -1,12 +1,7 @@
 <template>
 <div class="bg">  
     <Cabecera></Cabecera> 
-    <div class="container">
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
+    <div class="container mt-5">
         <br>
         <br>
         <div class="d-flex justify-content-center h-100">
