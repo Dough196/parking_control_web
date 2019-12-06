@@ -3,7 +3,10 @@
 		<b-container fluid class="d-flex justify-content-center h-100 w-100">
 			<b-row align-v="center">
 				<!-- Tarjeta de informacion -->
-				<div>
+				<div class="card">
+					<div class="card-header text-center">UNIVERSIDAD TECNOLOGICA DE EL SALVADOR</div>
+					<div class="card-body  p-lg-5">
+						<div>
 					<div class="card border-utec mb-3" style="width: 28rem;">
 						<div class="card-header color-utec text-white">Header</div>
 						<div class="card-body">
@@ -13,8 +16,11 @@
 							<p class="card-text">25-7890-123</p>
 						</div>
 
+                        <!-- Seccion de contraseñas -->
 						<div class="card-header color-utec text-white">Cambio de contraseña</div>
 						<div class="card-body">
+
+                            <!-- Input contraseña actual -->
 							<div class="input-group mb-3">
 								<div class="input-group-prepend">
 									<span class="input-group-text" id="basic-addon1">
@@ -30,6 +36,7 @@
 								/>
 							</div>
 
+                            <!-- Input contraseña nueva -->
 							<div class="input-group mb-3">
 								<div class="input-group-prepend">
 									<span class="input-group-text" id="basic-addon1">
@@ -45,6 +52,7 @@
 								/>
 							</div>
 
+                            <!-- Input confirmacion de contraseña -->
 							<div class="input-group mb-3">
 								<div class="input-group-prepend">
 									<span class="input-group-text" id="basic-addon1">
@@ -60,12 +68,17 @@
 								/>
 							</div>
 
+                            <!-- Boton para aceptar los cambios -->
 							<div class="d-flex justify-content-center">
 								<button type="button" class="btn color-utec text-white">Aceptar</button>
 							</div>
 						</div>
 					</div>
 				</div>
+					</div>
+					<div class="card-footer text-muted text-center">ATREVÁVONOS A SER MEJORES</div>
+				</div>
+
 			</b-row>
 		</b-container>
 	</div>
