@@ -8,7 +8,7 @@
 					<div class="card-body  p-lg-5">
 						<div>
 					<div class="card border-utec mb-3" style="width: 28rem;">
-						<div class="card-header color-utec text-white">Header</div>
+						<div class="card-header color-utec text-white">Credenciales</div>
 						<div class="card-body">
 							<h6 class="card-subtitle mb-2 text-muted">Nombres</h6>
 							<p class="card-text">Ing. Jorge Aparicio de Tal</p>
