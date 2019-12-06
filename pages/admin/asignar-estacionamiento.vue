@@ -7,43 +7,47 @@
 					<div class="card-header text-center">UNIVERSIDAD TECNOLOGICA DE EL SALVADOR</div>
 					<div class="card-body  p-lg-5">
 						<div>
-					<div class="card border-utec mb-3" style="width: 28rem;">
-						<div class="card-header color-utec text-white">Nuevo Edificio</div>
+					<div class="card border-utec mb-3 " style="width: 28rem;">
+						<div class="card-header color-utec text-white">Asignar estacionamiento</div>
 						<div class="card-body">
-							<!-- Input para nombre del edificio -->
-							<h6 class="card-subtitle mb-2 text-muted">Nombre del edificio</h6>
-							<input
-									type="Ingresa edificio"
-									class="form-control"
-									placeholder="Ingrese el nombre del edificio"
-									aria-label="Username"
-									aria-describedby="basic-addon1"
-							/>
-							<!-- Input para cantidad de estacionamientos -->
-							<h6 class="card-subtitle mb-2 text-muted mt-3">Cantidad de estacionamientos</h6>
-							<input
-									type="Ingresa cantidad estacionamientos"
-									class="form-control"
-									placeholder="Cantidad de estacionamientos"
-									aria-label="Username"
-									aria-describedby="basic-addon1"
-							/>
-							<!-- Input para estacionamientos reservados -->
-                            <div>
-                            <h6 class="card-subtitle mb-2 text-muted mt-3">Estacionamientos reservados</h6>
-                            <input
-									type="Ingresa cantidad reservas"
-									class="form-control"
-									placeholder="Cantidad de reservas"
-									aria-label="Username"
-									aria-describedby="basic-addon1"
-							/>
-                            </div>
+							
+                            <!-- Seleccionador de horario -->
+                            <h6 class="card-subtitle mb-2 text-muted">Horario</h6>
+							<div style = 'width: 250px;' class="form-group seleccionador">
+					        <select class="form-control">
+					            <option>--seleccione una opción--</option>
+					    	    <option>2</option>
+						        <option>3</option>
+						        <option>4</option>
+					        </select>
+					        </div>
 
+                            <!-- Seleccionador de docente -->
+							<h6 class="card-subtitle mb-2 text-muted mt-3">Docente</h6>
+							<div style = 'width: 250px;' class="form-group">
+					        <select class="form-control">
+					            <option>--seleccione una opción--</option>
+					    	    <option>2</option>
+						        <option>3</option>
+						        <option>4</option>
+					        </select>
+					        </div>
+
+                            <!-- Seleccionador de zona a estacionar -->
+                            <h6 class="card-subtitle mb-2 text-muted mt-3">Zona de estacionar</h6>
+							<div style = 'width: 250px;' class="form-group">
+					        <select class="form-control">
+					            <option>--seleccione una opción--</option>
+					    	    <option>2</option>
+						        <option>3</option>
+						        <option>4</option>
+					        </select>
+					        </div>
 							<!-- Boton para aceptar los cambios -->
-							<div class="d-flex justify-content-center mt-3">
+							<div class="d-flex mt-3">
 								<button type="button" class="btn color-utec text-white">Aceptar</button>
 							</div>
+                        
                         
 						</div>
 
@@ -51,7 +55,7 @@
 						<div class="card-header color-utec text-white">Descargar plantilla Excel</div>
 						<div class="card-body">
 
-							<!-- Boton para seleccionar archivo y para subir archivo -->
+							<!-- Boton para aceptar los cambios -->
 							<div class="d-flex justify-content-center mt-3">
 								<button type="button" class="btn boton-color text-black">seleccionar archivo...</button>
 								<button type="button" class="btn color-utec text-white ml-2">Subir archivo</button>
@@ -115,4 +119,5 @@ body {
 .color-icon {
 	color: #98094d;
 }
+
 </style>

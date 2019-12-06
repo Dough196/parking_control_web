@@ -37,7 +37,15 @@
             </li>
             <br>
             <li>
-                <font-awesome-icon :icon="['fas', 'building']" class="color-icon-sb" /><a href="#" class="text-white"> Listado de edificios</a>
+                <font-awesome-icon :icon="['fas', 'check']" class="color-icon-sb" /><a href="#" class="text-white"> Reservar estacionamiento</a>
+            </li>
+            <br>
+            <li>
+                <font-awesome-icon :icon="['fas', 'building']" class="color-icon-sb" /><a href="#" class="text-white"> Nuevo edificio</a>
+            </li>
+            <br>
+            <li>
+                <font-awesome-icon :icon="['fas', 'address-book']" class="color-icon-sb" /><a href="#" class="text-white"> Asignar Administradores</a>
             </li>
             <br>
             <li>
