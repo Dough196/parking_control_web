@@ -1,43 +1,95 @@
 <template>
-<div>
-    <div class="container d-flex justify-content-center">
-        <div class="card mt-5">
-            <h5 class="card-header bg-colorheader text-light">Featured</h5>
-        <div class="card-body">
-        <div v-if="user.nombre || user.apellidos">
-            <b>Nombres</b>
-            <p>{{ user.nombres + ' ' + user.apellidos }}</p>
-        </div>
-        <div v-if="user.email">
-            <b>E-mail</b>
-            <p>{{ user.email }}</p>
-        </div>
-        <div v-if="user.num_placa">
-            <b>Placa</b>
-            <p>{{ user.num_placa }}</p>
-        </div>
-        <div v-if="user.reservas">
-            <b>Cambiar clave de acceso</b>
-        <div class="card d-flex">
-            <form class="mt-3 ml-4 mr-3">
-				<div class="form-group">
-					<input v-model="contraseA" type="text" class="form-control" placeholder="Contraseña actual" required>
-			    </div>
-				<div class="form-group">
-				    <input v-model="nuevaContraseA" type="text" class="form-control" placeholder="Nueva contraseña" required>
+<div class="bg">
+		<b-container fluid class="d-flex justify-content-center h-100 w-100">
+			<b-row align-v="center">
+				<!-- Tarjeta de informacion -->
+				<div class="card">
+					<div class="card-header text-center">UNIVERSIDAD TECNOLOGICA DE EL SALVADOR</div>
+					<div class="card-body  p-lg-5">
+						<div>
+					<div class="card border-utec mb-3" style="width: 28rem;">
+						<div class="card-header color-utec text-white">Header</div>
+						<div class="card-body">
+							<h6 class="card-subtitle mb-2 text-muted">Nombres</h6>
+							<p class="card-text">Fulano de Tal</p>
+							<h6 class="card-subtitle mb-2 text-muted">Carné</h6>
+							<p class="card-text">25-7890-123</p>
+                            <div v-if="user.email">
+                            <h6 class="card-subtitle mb-2 text-muted">E-mail</h6>
+                            <p>{{ user.email }}</p>
+                            </div>
+                            <div v-if="user.num_placa">
+                            <h6 class="card-subtitle mb-2 text-muted">Placa</h6>
+                            <p>{{ user.num_placa }}</p>
+                        </div>
+						</div>
+
+                        <!-- Seccion de contraseñas -->
+						<div class="card-header color-utec text-white">Cambio de contraseña</div>
+						<div class="card-body">
+
+                            <!-- Input contraseña actual -->
+							<div class="input-group mb-3">
+								<div class="input-group-prepend">
+									<span class="input-group-text" id="basic-addon1">
+										<font-awesome-icon :icon="['fas', 'key']" class="color-icon" />
+									</span>
+								</div>
+								<input
+									type="text"
+									class="form-control"
+									placeholder="Ingresa tu contraseña actual"
+									aria-label="password"
+									aria-describedby="basic-addon1"
+								/>
+							</div>
+
+                            <!-- Input contraseña nueva -->
+							<div class="input-group mb-3">
+								<div class="input-group-prepend">
+									<span class="input-group-text" id="basic-addon1">
+										<font-awesome-icon :icon="['fas', 'key']" class="color-icon" />
+									</span>
+								</div>
+								<input
+									type="Ingresa tu nueva contraseña"
+									class="form-control"
+									placeholder="Password"
+									aria-label="Username"
+									aria-describedby="basic-addon1"
+								/>
+							</div>
+
+                            <!-- Input confirmacion de contraseña -->
+							<div class="input-group mb-3">
+								<div class="input-group-prepend">
+									<span class="input-group-text" id="basic-addon1">
+										<font-awesome-icon :icon="['fas', 'key']" class="color-icon" />
+									</span>
+								</div>
+								<input
+									type="Confirma tu nueva contraseña"
+									class="form-control"
+									placeholder="Password"
+									aria-label="Username"
+									aria-describedby="basic-addon1"
+								/>
+							</div>
+
+                            <!-- Boton para aceptar los cambios -->
+							<div class="d-flex justify-content-center">
+								<button type="button" class="btn color-utec text-white">Aceptar</button>
+							</div>
+						</div>
+					</div>
 				</div>
-				<div class="form-group">
-					<input v-model="confContraseA" type="text" class="form-control" placeholder="Confirmar contraseña" required>
+					</div>
+					<div class="card-footer text-muted text-center">ATREVÁVONOS A SER MEJORES</div>
 				</div>
-					<button type="submit" class="btn btn-primary m-md-2 color-button">Confirmar</button>
-                    <button type="submit" class="btn btn-primary ml-4 color-button">Cancelar</button>
-			</form>
-        </div>
-        </div>
-        </div>
-        </div>
-        </div>
-    </div>
+
+			</b-row>
+		</b-container>
+	</div>
 </template>
 
 <script>
@@ -56,13 +108,30 @@ export default {
 </script>
 
 <style>
-    .bg-colorheader {
-        background: #98094D;
+body {
+	justify-content: center;
+}
 
-    }
+.bg {
+	/* Full height */
+	height: 100vh;
+	width: 100%;
 
-    .color-button {
-        background: #98094D;
-    }
+	/* Center and scale the image nicely */
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
 
+.color-utec {
+	background: #98094d;
+}
+
+.border-utec {
+	border: #98094d solid 1px;
+}
+
+.color-icon {
+	color: #98094d;
+}
 </style>
