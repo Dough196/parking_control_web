@@ -20,16 +20,16 @@
                 <a href="#" class="text-white"> Inicio</a>
             </li>
             <li>
-                <a href="#" class="text-white"> Ver Perfil</a>
+                <font-awesome-icon :icon="['fas', 'user']" class="color-icon-sb" /><a href="#" class="text-white"> Ver Perfil</a>
+            </li>
+            <li>
+                <a href="#" class="text-white">Asignar estacionamiento</a>
             </li>
             <li>
                 <a href="#" class="text-white">Link</a>
             </li>
             <li>
-                <a href="#" class="text-white">Link</a>
-            </li>
-            <li>
-                <font-awesome-icon :icon="['fas', 'user']" class="color-icon-sb" /><a href="#" class="text-white" @click="logout"> Cerrar Sesion</a>
+                <a href="#" class="text-white" @click="logout"> Cerrar Sesion</a>
             </li>
         </ul>
     </div>

@@ -29,7 +29,7 @@
 				<div class="form-group">
 					<input v-model="confContraseA" type="text" class="form-control" placeholder="Confirmar contraseña" required>
 				</div>
-					<button type="submit" class="btn btn-primary m-md-2">Confirmar</button>
+					<button type="submit" class="btn btn-primary m-md-2 color-button">Confirmar</button>
                     <button type="submit" class="btn btn-primary ml-4 color-button">Cancelar</button>
 			</form>
         </div>
