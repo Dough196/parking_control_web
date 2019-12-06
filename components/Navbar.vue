@@ -16,39 +16,39 @@
         </div>
 
         <ul class="list-unstyled components mt-3">
-            <li>
+            <li class="exHover">
                 <font-awesome-icon :icon="['fas', 'home']" class="color-icon-sb" /><a href="#" class="text-white"> Inicio</a>
             </li>
             <br>
-            <li>
+            <li class="exHover">
                 <font-awesome-icon :icon="['fas', 'user']" class="color-icon-sb" /><a href="#" class="text-white"> Ver Perfil</a>
             </li>
             <br>
-            <li>
+            <li class="exHover">
                 <font-awesome-icon :icon="['fas', 'edit']" class="color-icon-sb" /><a href="#" class="text-white"> Asignar estacionamiento</a>
             </li>
             <br>
-            <li>
+            <li class="exHover">
                 <font-awesome-icon :icon="['fas', 'address-book']" class="color-icon-sb"/><a href="#" class="text-white"> Asignar vigilante</a>
             </li>
             <br>
-            <li>
+            <li class="exHover">
                 <font-awesome-icon :icon="['fas', 'calendar-check']" class="color-icon-sb" /><a href="#" class="text-white"> Crear eventos</a>
             </li>
             <br>
-            <li>
+            <li class="exHover">
                 <font-awesome-icon :icon="['fas', 'check']" class="color-icon-sb" /><a href="#" class="text-white"> Reservar estacionamiento</a>
             </li>
             <br>
-            <li>
+            <li class="exHover">
                 <font-awesome-icon :icon="['fas', 'building']" class="color-icon-sb" /><a href="#" class="text-white"> Nuevo edificio</a>
             </li>
             <br>
-            <li>
+            <li class="exHover">
                 <font-awesome-icon :icon="['fas', 'address-book']" class="color-icon-sb" /><a href="#" class="text-white"> Asignar Administradores</a>
             </li>
             <br>
-            <li>
+            <li class="exHover">
                 <font-awesome-icon :icon="['fas', 'sign-out-alt']" class="color-icon-sb" /><a href="#" class="text-white" @click="logout"> Cerrar Sesion</a>
             </li>
         </ul>
@@ -91,4 +91,10 @@ export default {
     color: #ffff;
 }
 
+.exHover:hover {
+    background: rgb(243, 191, 214);
+    color: #ffff;
+    padding: 10px;
+    border-radius: 3px;
+}
 </style>
