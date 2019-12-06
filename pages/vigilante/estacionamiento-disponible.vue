@@ -5,20 +5,68 @@
 				<h5 class="card-header bg-colorheader text-light">Estacionamientos disponibles</h5>
 				<div class="card-body">
 					<div class="card d-flex">
-						<div id="divParqueo1">
-							<font-awesome-icon :icon="['fas', 'building']" id="parqueo" />
-						</div>
-						<div id="divParqueo">
-							<div v-if>
-								<b>Edificio</b>
-								<p>{{ }}</p>
-							</div>
+						<ul class="list-group">
+							<li class="list-group-item">
 
-							<div v-if>
-								<b>Espacios disponibles</b>
-								<p>{{ }}</p>
-							</div>
-						</div>
+								<div class="row">
+                                    <div class="col-3 d-flex align-items-center">
+                                        <font-awesome-icon :icon="['fas', 'building']" id="parqueo" class="float-left" />
+                                    </div>
+                                    <div class="col-9">
+                                        <div>Edificio</div>
+                                        <div class="text-text">Benito Juarez</div>
+                                        <div>Espacios disponibles</div>
+                                        <div class="text-text">0 de 50</div>
+                                    </div>
+								</div>
+
+							</li>
+							<li class="list-group-item">
+
+                                <div class="row">
+                                    <div class="col-3 d-flex align-items-center">
+                                        <font-awesome-icon :icon="['fas', 'building']" id="parqueo" class="float-left" />
+                                    </div>
+                                    <div class="col-9">
+                                        <div>Edificio</div>
+                                        <div class="text-text">Benito Juarez</div>
+                                        <div>Espacios disponibles</div>
+                                        <div class="text-text">0 de 50</div>
+                                    </div>
+								</div>
+
+                            </li>
+							<li class="list-group-item">
+
+                                <div class="row">
+                                    <div class="col-3 d-flex align-items-center">
+                                        <font-awesome-icon :icon="['fas', 'building']" id="parqueo" class="float-left" />
+                                    </div>
+                                    <div class="col-9">
+                                        <div>Edificio</div>
+                                        <div class="text-text">Benito Juarez</div>
+                                        <div>Espacios disponibles</div>
+                                        <div class="text-text">0 de 50</div>
+                                    </div>
+								</div>
+
+                            </li>
+							<li class="list-group-item">
+
+                                <div class="row">
+                                    <div class="col-3 d-flex align-items-center">
+                                        <font-awesome-icon :icon="['fas', 'building']" id="parqueo" class="float-left" />
+                                    </div>
+                                    <div class="col-9">
+                                        <div>Edificio</div>
+                                        <div class="text-text">Benito Juarez</div>
+                                        <div>Espacios disponibles</div>
+                                        <div class="text-text">0 de 50</div>
+                                    </div>
+								</div>
+
+                            </li>
+						</ul>
 					</div>
 				</div>
 			</div>
@@ -44,28 +92,14 @@ export default {
 }
 
 #parqueo {
-	color: green;
-	font-size: 100px;
+	color: #98094d;
+	font-size: 50px;
+    margin-right: 10px;
 }
 
-#divParqueo {
-	display: flex;
-	justify-content: center;
-	align-content: center;
-	flex-direction: column;
-
-	width: 100%;
-	height: 100%;
-	float: left;
-}
-
-#divParqueo1 {
-	display: flex;
-	justify-content: center;
-	align-content: center;
-	flex-direction: column;
-	height: 100%;
-	width: 20%;
-	float: left;
+.text-text {
+	margin: 0;
+    padding: 0;
+    font-size: 12px;
 }
 </style>
