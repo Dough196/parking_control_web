@@ -1,10 +1,11 @@
 import Vue from 'vue'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faUser, faBuilding, faKey, faSignOutAlt } from '@fortawesome/free-solid-svg-icons'
+import { faUser, faBuilding, faKey, faSignOutAlt, faEdit, faHome, faAddressBook, faCalendarCheck } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-library.add(faUser, faBuilding)
-library.add(faKey, faBuilding)
+library.add(faUser, faBuilding, faHome, faSignOutAlt, faAddressBook)
+library.add(faKey, faCalendarCheck)
+library.add(faEdit, faBuilding)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 

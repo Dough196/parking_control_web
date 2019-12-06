@@ -17,19 +17,31 @@
 
         <ul class="list-unstyled components mt-3">
             <li>
-                <a href="#" class="text-white"> Inicio</a>
+                <font-awesome-icon :icon="['fas', 'home']" class="color-icon-sb" /><a href="#" class="text-white"> Inicio</a>
             </li>
+            <br>
             <li>
                 <font-awesome-icon :icon="['fas', 'user']" class="color-icon-sb" /><a href="#" class="text-white"> Ver Perfil</a>
             </li>
+            <br>
             <li>
-                <a href="#" class="text-white">Asignar estacionamiento</a>
+                <font-awesome-icon :icon="['fas', 'edit']" class="color-icon-sb" /><a href="#" class="text-white"> Asignar estacionamiento</a>
             </li>
+            <br>
             <li>
-                <a href="#" class="text-white">Link</a>
+                <font-awesome-icon :icon="['fas', 'address-book']" class="color-icon-sb"/><a href="#" class="text-white"> Asignar vigilante</a>
             </li>
+            <br>
             <li>
-                <a href="#" class="text-white" @click="logout"> Cerrar Sesion</a>
+                <font-awesome-icon :icon="['fas', 'calendar-check']" class="color-icon-sb" /><a href="#" class="text-white"> Crear eventos</a>
+            </li>
+            <br>
+            <li>
+                <font-awesome-icon :icon="['fas', 'building']" class="color-icon-sb" /><a href="#" class="text-white"> Listado de edificios</a>
+            </li>
+            <br>
+            <li>
+                <font-awesome-icon :icon="['fas', 'sign-out-alt']" class="color-icon-sb" /><a href="#" class="text-white" @click="logout"> Cerrar Sesion</a>
             </li>
         </ul>
     </div>
