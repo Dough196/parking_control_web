@@ -14,24 +14,12 @@
 								<!-- Seleccionador de vigilante -->
 								<h6 class="card-subtitle mb-2 text-muted">Nombre del vigilante</h6>
 								<div class="form-group seleccionador">
-								<!-- <select class="form-control">
-									<option>--seleccione una opción--</option>
-									<option>2</option>
-									<option>3</option>
-									<option>4</option>
-								</select> -->
 								<Multiselect v-model="selectedVigilant" :options="vigilants" :custom-label="nombreCompleto" placeholder="Seleccionar..." label="nombres" track-by="nombres" :show-labels="false" :allow-empty="false"></Multiselect>
 								</div>
 
 								<!-- Seleccionador de edificio -->
 								<h6 class="card-subtitle mb-2 text-muted mt-3">Edificio</h6>
 								<div class="form-group">
-								<!-- <select class="form-control">
-									<option>--seleccione una opción--</option>
-									<option>2</option>
-									<option>3</option>
-									<option>4</option>
-								</select> -->
 								<Multiselect v-model="selectedBuilding" :options="buildings" placeholder="Seleccionar..." label="nombre" track-by="nombre" :show-labels="false" :allow-empty="false"></Multiselect>
 								</div>
 							

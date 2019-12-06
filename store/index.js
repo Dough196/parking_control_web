@@ -8,6 +8,9 @@ export const getters = {
   isAdmin(state) {
     return state.auth.user.rol_id === 1
   },
+  isVigilant(state) {
+    return state.auth.user.rol_id === 5
+  },
   strategy(state) {
     return state.auth.strategy
   }

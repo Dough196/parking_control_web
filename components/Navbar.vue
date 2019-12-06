@@ -17,39 +17,39 @@
 
         <ul class="list-unstyled components mt-3">
             <li class="exHover">
-                <font-awesome-icon :icon="['fas', 'home']" class="color-icon-sb" /><a href="#" class="text-white"> Inicio</a>
+                <font-awesome-icon :icon="['fas', 'home']" class="color-icon-sb" /><nuxt-link to="/" class="text-white"> Inicio</nuxt-link>
             </li>
             <br>
             <li class="exHover">
-                <font-awesome-icon :icon="['fas', 'user']" class="color-icon-sb" /><a href="#" class="text-white"> Ver Perfil</a>
+                <font-awesome-icon :icon="['fas', 'user']" class="color-icon-sb" /><nuxt-link to="/perfil" class="text-white"> Ver Perfil</nuxt-link>
             </li>
             <template v-if="isAdmin">
                 <br>
-                <li>
+                <li class="exHover">
                     <font-awesome-icon :icon="['fas', 'edit']" class="color-icon-sb" /><nuxt-link to="/admin/asignar-estacionamiento" class="text-white"> Asignar estacionamiento</nuxt-link>
                 </li>
             </template>
             <template v-if="isAdmin">
                 <br>
-                <li>
+                <li class="exHover">
                     <font-awesome-icon :icon="['fas', 'address-book']" class="color-icon-sb"/><nuxt-link to="/admin/asignar-vigilante" class="text-white"> Asignar vigilante</nuxt-link>
                 </li>
             </template>
             <template v-if="isAdmin">
                 <br>
-                <li>
+                <li class="exHover">
                     <font-awesome-icon :icon="['fas', 'calendar-check']" class="color-icon-sb" /><nuxt-link to="#" class="text-white"> Crear eventos</nuxt-link>
                 </li>
             </template>
             <template v-if="isAdmin">
                 <br>
-                <li>
-                    <font-awesome-icon :icon="['fas', 'check']" class="color-icon-sb" /><nuxt-link to="#" class="text-white"> Reservar estacionamiento</nuxt-link>
+                <li class="exHover">
+                    <font-awesome-icon :icon="['fas', 'check']" class="color-icon-sb" /><nuxt-link to="/admin/reserva-estacionamiento" class="text-white"> Reservar estacionamiento</nuxt-link>
                 </li>
             </template>
             <template v-if="isAdmin">
                 <br>
-                <li>
+                <li class="exHover">
                     <font-awesome-icon :icon="['fas', 'building']" class="color-icon-sb" /><nuxt-link to="#" class="text-white"> Nuevo edificio</nuxt-link>
                 </li>
             </template>
@@ -59,7 +59,7 @@
                 <font-awesome-icon :icon="['fas', 'edit']" class="color-icon-sb" /><a href="#" class="text-white"> Asignar estacionamiento</a>
             </li>
             </template> -->
-            <br>
+            <!-- <br>
             <li class="exHover">
                 <font-awesome-icon :icon="['fas', 'address-book']" class="color-icon-sb"/><a href="#" class="text-white"> Asignar vigilante</a>
             </li>
@@ -78,7 +78,7 @@
             <br>
             <li class="exHover">
                 <font-awesome-icon :icon="['fas', 'address-book']" class="color-icon-sb" /><a href="#" class="text-white"> Asignar Administradores</a>
-            </li>
+            </li> -->
             <br>
             <li class="exHover">
                 <font-awesome-icon :icon="['fas', 'sign-out-alt']" class="color-icon-sb" /><a href="#" class="text-white" @click="logout"> Cerrar Sesion</a>
@@ -96,11 +96,12 @@ export default {
     },
     mounted() {},
     methods: {
-        async logout() {
-            await this.$auth.logout();
+        logout() {
+            this.$auth.logout()
             this.$router.push({
                 path: "/login"
-            });
+            })
+            // window.location.reload(true)
         }
     }
 };
