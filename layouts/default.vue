@@ -1,7 +1,7 @@
 <template>
   <div class="layout">
     <Navbar v-if="loggedIn" />
-    <nuxt />
+    <nuxt :class="[loggedIn ? 'col-10' : 'col-12']" />
   </div>
 </template>
 
@@ -15,7 +15,8 @@ export default {
 
 <style>
   .layout {
-    
+    display: flex;
+    margin: 0;
   }
 
 </style>

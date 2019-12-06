@@ -1,5 +1,5 @@
 <template>
-<div class="wrapper">
+<div class="col-2 p-0">
     <!-- Sidebar -->
     <nav id="sidebar">
     <!-- <nav class="navbar navbar-expand-lg navbar-light">
@@ -10,9 +10,9 @@
                 </button>
             </div>
         </nav> -->
-    <div class="container mt-4">
+    <div class="container">
         <div class="sidebar-header text-white">
-            <h3>Administrador</h3>
+            <h3>{{ user.rol.nombre }}</h3>
         </div>
 
         <ul class="list-unstyled components mt-3">
@@ -23,10 +23,42 @@
             <li class="exHover">
                 <font-awesome-icon :icon="['fas', 'user']" class="color-icon-sb" /><a href="#" class="text-white"> Ver Perfil</a>
             </li>
+            <template v-if="isAdmin">
+                <br>
+                <li>
+                    <font-awesome-icon :icon="['fas', 'edit']" class="color-icon-sb" /><nuxt-link to="/admin/asignar-estacionamiento" class="text-white"> Asignar estacionamiento</nuxt-link>
+                </li>
+            </template>
+            <template v-if="isAdmin">
+                <br>
+                <li>
+                    <font-awesome-icon :icon="['fas', 'address-book']" class="color-icon-sb"/><nuxt-link to="/admin/asignar-vigilante" class="text-white"> Asignar vigilante</nuxt-link>
+                </li>
+            </template>
+            <template v-if="isAdmin">
+                <br>
+                <li>
+                    <font-awesome-icon :icon="['fas', 'calendar-check']" class="color-icon-sb" /><nuxt-link to="#" class="text-white"> Crear eventos</nuxt-link>
+                </li>
+            </template>
+            <template v-if="isAdmin">
+                <br>
+                <li>
+                    <font-awesome-icon :icon="['fas', 'check']" class="color-icon-sb" /><nuxt-link to="#" class="text-white"> Reservar estacionamiento</nuxt-link>
+                </li>
+            </template>
+            <template v-if="isAdmin">
+                <br>
+                <li>
+                    <font-awesome-icon :icon="['fas', 'building']" class="color-icon-sb" /><nuxt-link to="#" class="text-white"> Nuevo edificio</nuxt-link>
+                </li>
+            </template>
+            <!-- <template v-if="isAdmin">
             <br>
             <li class="exHover">
                 <font-awesome-icon :icon="['fas', 'edit']" class="color-icon-sb" /><a href="#" class="text-white"> Asignar estacionamiento</a>
             </li>
+            </template> -->
             <br>
             <li class="exHover">
                 <font-awesome-icon :icon="['fas', 'address-book']" class="color-icon-sb"/><a href="#" class="text-white"> Asignar vigilante</a>
@@ -59,6 +91,10 @@
 
 <script>
 export default {
+    data() {
+        return {}
+    },
+    mounted() {},
     methods: {
         async logout() {
             await this.$auth.logout();
@@ -76,12 +112,7 @@ export default {
 }
 
 #sidebar {
-    min-width: 250px;
-    max-width: 250px;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
+    height: 100%;
     /* top layer */
     z-index: 9999;
     background: rgba(152, 9, 78, 0.774);

@@ -39,8 +39,8 @@
 
         </div>
       </div>
-      <div class="card-footer">
-        <button class="btn btn-primary" type="button" @click="consultar">Consultar parqueo</button>
+      <div  v-if="user.reservas" class="card-footer d-flex justify-content-center">
+        <nuxt-link class="btn color-utec text-white" to="/consultar-parqueo">Consultar parqueo</nuxt-link>
         <!-- <font-awesome-icon :icon="['fas', 'user']" /> -->
       </div>
     </div>
