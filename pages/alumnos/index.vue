@@ -62,8 +62,4 @@ body {
 .border-utec {
   border: #98094d solid 1px;
 }
-
-.n-radius {
-  border-radius: 0;
-}
 </style>
