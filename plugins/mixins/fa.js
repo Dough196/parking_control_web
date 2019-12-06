@@ -5,7 +5,6 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 library.add(faUser, faBuilding)
 library.add(faKey, faBuilding)
-library.add(faSignOutAlt, faBuilding)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
