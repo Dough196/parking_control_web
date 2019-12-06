@@ -44,7 +44,7 @@
 							<div class="d-flex justify-content-center mt-3">
 								<button type="button" class="btn color-utec text-white">Aceptar</button>
 							</div>
-                        
+
 						</div>
 
                         <!-- Seccion de descarga de excel -->

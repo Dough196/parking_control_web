@@ -44,10 +44,9 @@
 							</div>
 						</div>
 
-                        <div class="d-flex justify-content-center">
-						<a href="/docente" class="btn color-utec text-white">Regresar</a>
-					</div>
-
+						<div class="d-flex justify-content-center">
+							<a href="/docente" class="btn color-utec text-white">Regresar</a>
+						</div>
 					</div>
 
 					<div class="card-footer text-muted text-center">ATREVÁMONOS A SER MEJORES</div>
