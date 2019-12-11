@@ -209,7 +209,6 @@ export default {
 			} else {
 				this.form.user_id = this.selectedUser.id
 				this.form.edificio_id = this.selectedBuilding.id
-				console.log('fx2')
 				this.$axios.post('reservar-parqueo', this.form)
 					.then((r) => {
 						if (r.status === 200) {

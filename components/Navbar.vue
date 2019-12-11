@@ -26,6 +26,12 @@
             <template v-if="isAdmin">
                 <br>
                 <li class="exHover">
+                    <font-awesome-icon :icon="['fas', 'id-card']" class="color-icon-sb" /><nuxt-link to="/admin/nuevo-usuario" class="text-white"> Nuevo Usuario</nuxt-link>
+                </li>
+            </template>
+            <template v-if="isAdmin">
+                <br>
+                <li class="exHover">
                     <font-awesome-icon :icon="['fas', 'edit']" class="color-icon-sb" /><nuxt-link to="/admin/asignar-estacionamiento" class="text-white"> Asignar estacionamiento</nuxt-link>
                 </li>
             </template>
@@ -38,7 +44,7 @@
             <template v-if="isAdmin">
                 <br>
                 <li class="exHover">
-                    <font-awesome-icon :icon="['fas', 'calendar-check']" class="color-icon-sb" /><nuxt-link to="#" class="text-white"> Crear eventos</nuxt-link>
+                    <font-awesome-icon :icon="['fas', 'calendar-check']" class="color-icon-sb" /><nuxt-link to="" class="text-white"> Crear eventos</nuxt-link>
                 </li>
             </template>
             <template v-if="isAdmin">
@@ -50,7 +56,13 @@
             <template v-if="isAdmin">
                 <br>
                 <li class="exHover">
-                    <font-awesome-icon :icon="['fas', 'building']" class="color-icon-sb" /><nuxt-link to="#" class="text-white"> Nuevo edificio</nuxt-link>
+                    <font-awesome-icon :icon="['fas', 'building']" class="color-icon-sb" /><nuxt-link to="" class="text-white"> Nuevo edificio</nuxt-link>
+                </li>
+            </template>
+            <template v-if="isVigilant">
+                <br>
+                <li class="exHover">
+                    <font-awesome-icon :icon="['fas', 'book']" class="color-icon-sb" /><nuxt-link to="" class="text-white"> Validar entrada o salida</nuxt-link>
                 </li>
             </template>
             <!-- <template v-if="isAdmin">
