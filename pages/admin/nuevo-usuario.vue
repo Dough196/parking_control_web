@@ -132,7 +132,7 @@
 						<div class="card-header color-utec text-white">
                             Crear varios usuarios mediante archivo CSV
                             <div class="d-flex justify-content-center mt-3">
-                                <button type="button" class="btn boton-color text-black">Descargar plantilla</button>
+                                <b-button href="static/Plantilla.zip" download>Descargar plantilla</b-button>
                             </div>
                         </div>
 						<div class="card-body">
@@ -253,21 +253,6 @@ export default {
                 .then((r) => {
                     if (r.status === 200 || r.status === 201) {
                         this.result = r.data;
-                        // this.$bvToast.toast(`Usuario creado exitosamente`, {
-                        //     title: `EXITO`,
-                        //     toaster: 'b-toaster-top-center',
-                        //     variant: 'success',
-                        //     solid: true
-                        // })
-                        // this.selectedRole = null
-                        // this.form.nombres = null
-                        // this.form.apellidos = null
-                        // this.form.email = null
-                        // this.form.carnet = null
-                        // this.form.num_placa = null
-                        // this.form.password = null
-                        // this.form.password_confirmation = null
-                        // this.form.rol_id = null
                         this.saveUsersWithFile = true
                     }
                 })
