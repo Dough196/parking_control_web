@@ -64,17 +64,6 @@
 							</form>
                         
 						</div>
-
-                        <!-- Seccion de descarga de excel -->
-						<div class="card-header color-utec text-white">Descargar plantilla Excel</div>
-						<div class="card-body">
-
-							<!-- Boton para aceptar los cambios -->
-							<div class="d-flex justify-content-center mt-3">
-								<button type="button" class="btn boton-color text-black">seleccionar archivo...</button>
-								<button type="button" class="btn color-utec text-white ml-2">Subir archivo</button>
-							</div>
-						</div>
 					</div>
 				</div>
 					</div>

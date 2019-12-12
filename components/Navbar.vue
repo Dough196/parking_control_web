@@ -44,7 +44,7 @@
             <template v-if="isAdmin">
                 <br>
                 <li class="exHover">
-                    <font-awesome-icon :icon="['fas', 'calendar-check']" class="color-icon-sb" /><nuxt-link to="" class="text-white"> Crear eventos</nuxt-link>
+                    <font-awesome-icon :icon="['fas', 'calendar-check']" class="color-icon-sb" /><nuxt-link to="/admin/crear-evento" class="text-white"> Crear eventos</nuxt-link>
                 </li>
             </template>
             <template v-if="isAdmin">

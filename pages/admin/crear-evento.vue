@@ -11,65 +11,76 @@
 						<div class="card-header color-utec text-white">Crear evento</div>
 						<div class="card-body">
 							
-                            <!-- Seleccionador de zona de estacionar -->
-                            <h6 class="card-subtitle mb-2 text-muted">Zona de estacionar</h6>
-							<div style = 'width: 250px;' class="form-group seleccionador">
-					        <select class="form-control">
-					            <option>--seleccione una opción--</option>
-					    	    <option>2</option>
-						        <option>3</option>
-						        <option>4</option>
-					        </select>
-					        </div>
+                            <form @submit.prevent="onSubmit">
+								<!-- Seleccionador de zona de estacionar -->
+								<h6 class="card-subtitle mb-2 text-muted">Edificio</h6>
+								<div class="form-group seleccionador">
+								<Multiselect v-model="selectedBuilding" :options="buildings" placeholder="Seleccionar..." label="nombre" track-by="nombre" :show-labels="false" :allow-empty="false"></Multiselect>
+								</div>
 
-                            <!-- Seleccionador de cantidad de estacionamientos -->
-							<h6 class="card-subtitle mb-2 text-muted mt-3">Cantidad de estacionamientos</h6>
-							<div style = 'width: 250px;' class="form-group">
-					        <select class="form-control">
-					            <option>--seleccione una opción--</option>
-					    	    <option>2</option>
-						        <option>3</option>
-						        <option>4</option>
-					        </select>
-					        </div>
+								<h6 class="card-subtitle mb-2 text-muted mt-3">Fecha</h6>
+								<div class="form-group">
+									<input
+										v-model="form.fecha"
+										type="date"
+										class="form-control"
+										placeholder="Fecha"
+										aria-label="Fecha"
+										required
+									/>
+								</div>
+								<h6 class="card-subtitle mb-2 text-muted mt-3">Hora entrada</h6>
+								<div class="form-group">
+									<input
+										v-model="form.hora_entrada"
+										type="time"
+										class="form-control"
+										placeholder="Hora entrada"
+										aria-label="Hora entrada"
+										required
+									/>
+								</div>
+								<h6 class="card-subtitle mb-2 text-muted mt-3">Hora salida</h6>
+								<div class="form-group">
+									<input
+										v-model="form.hora_salida"
+										type="time"
+										class="form-control"
+										placeholder="Hora salida"
+										aria-label="Hora salida"
+										required
+									/>
+								</div>
+								<!-- Seleccionador de cantidad de estacionamientos -->
+								<h6 class="card-subtitle mb-2 text-muted mt-3">Cantidad de estacionamientos</h6>
+								<div class="form-group">
+									<input
+										v-model="form.cantidad"
+										type="number"
+										class="form-control"
+										placeholder="Cantidad"
+										aria-label="Cantidad"
+										required
+									/>
+								</div>
 
-                            <!-- Seleccionador de horario -->
-                            <h6 class="card-subtitle mb-2 text-muted mt-3">Horario</h6>
-							<div style = 'width: 250px;' class="form-group">
-					        <select class="form-control">
-					            <option>--seleccione una opción--</option>
-					    	    <option>2</option>
-						        <option>3</option>
-						        <option>4</option>
-					        </select>
-					        </div>
-                            <div class="form-group">
-					
-					        <div class="form-group">
-					        <h6 class="card-subtitle mb-2 text-muted mt-3">Fecha</h6>
-					            <input type='date'>
-					        </div>
-				            </div>
-				
-				            <h6 class="card-subtitle mb-2 text-muted mt-2">Motivo</h6>
-				            <textarea name="textarea" rows="5" cols="50"></textarea>
-							<!-- Boton para aceptar los cambios -->
-							<div class="d-flex mt-3">
-								<button type="button" class="btn color-utec text-white">Aceptar</button>
-							</div>
+								<h6 class="card-subtitle mb-2 text-muted mt-3">Comentario</h6>
+								<div class="form-group">
+									<textarea
+										v-model="form.comentario"
+										class="form-control"
+										placeholder="Comentario"
+										aria-label="Comentario"
+										rows="3"
+									></textarea>
+								</div>
+								<!-- Boton para aceptar los cambios -->
+								<div class="d-flex mt-3">
+									<button type="submit" class="btn color-utec text-white">Aceptar</button>
+								</div>
+							</form>
                         
                         
-						</div>
-
-                        <!-- Seccion de descarga de excel -->
-						<div class="card-header color-utec text-white">Descargar plantilla Excel</div>
-						<div class="card-body">
-
-							<!-- Boton para aceptar los cambios -->
-							<div class="d-flex justify-content-center mt-3">
-								<button type="button" class="btn boton-color text-black">seleccionar archivo...</button>
-								<button type="button" class="btn color-utec text-white ml-2">Subir archivo</button>
-							</div>
 						</div>
 					</div>
 				</div>
@@ -83,14 +94,84 @@
 </template>
 
 <script>
-
+import Multiselect from 'vue-multiselect'
 export default {
     components: {
-    },
-    mounted() {},
+		Multiselect
+	},
+	data() {
+		return {
+			buildings: [],
+			selectedBuilding: null,
+			form: {
+				edificio_id: 0,
+				fecha: null,
+				hora_entrada: null,
+				hora_salida: null,
+				cantidad: null,
+				comentario: null
+			}
+		}
+	},
+    mounted() {
+		this.fetchBuildings()
+	},
     methods: {
-        consultar() {
-            console.log('f')
+        async fetchBuildings() {
+			let { data } = await this.$axios.get('/edificios')
+            this.buildings = data.edificios
+		},
+		onSubmit() {
+			console.log(this.form)
+			if (!this.selectedBuilding) {
+				this.$bvToast.toast(`Edificio es requerido`, {
+					title: `ERROR`,
+					toaster: 'b-toaster-top-center',
+					variant: 'danger',
+					solid: true
+				})
+			} else if (parseInt(this.form.cantidad) > this.selectedBuilding.num_parqueos) {
+				this.$bvToast.toast(`La cantidad no puede ser mayor que la cantidad de parqueos del edificio`, {
+					title: `ERROR`,
+					toaster: 'b-toaster-top-center',
+					variant: 'danger',
+					solid: true
+				})
+			} else {
+				this.form.edificio_id = this.selectedBuilding.id
+				this.$axios.post('crear-evento', this.form)
+					.then((r) => {
+						if (r.status === 200) {
+							this.$bvToast.toast(`Evento creado exitosamente`, {
+								title: `EXITO`,
+								toaster: 'b-toaster-top-center',
+								variant: 'success',
+								solid: true
+							})
+							this.selectedBuilding = null
+							this.form.edificio_id = 0
+							this.form.fecha = null
+							this.form.hora_entrada = null
+							this.form.hora_salida = null
+							this.form.cantidad = null
+							this.form.comentario = null
+						}
+					})
+					.catch((e) => {
+						let text = ''
+						if (e.response.status === 422) {
+							text = e.response.data.data[Object.keys(e.response.data.data)[0]][0]
+						} else {
+							text = e.response.data.error
+						}
+						this.$bvToast.toast(`${text}`, {
+							title: `ERROR`,
+							toaster: 'b-toaster-top-center',
+							variant: 'danger',
+							solid: true
+						})
+					})
+			}
         }
     }
 
