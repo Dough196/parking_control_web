@@ -40,8 +40,8 @@ import Cabecera from "../components/Cabecera.vue"
 export default {
     data() {
         return {
-            usuario: 'admin@admin.com',
-            contra: 'password',
+            usuario: '',
+            contra: '',
         }
     },
     methods: {
