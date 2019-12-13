@@ -1,4 +1,4 @@
-<template>
+  <template>
 <div>
   <!-- <Cabecera></Cabecera> -->
   <div class="container">
@@ -36,8 +36,30 @@
               </p>
             </div>
           </div>
-
         </div>
+        <div v-if="edificio">
+          <b>Edificio</b>
+          <div class="list-group">
+            <div class="list-group-item">
+              <div class="d-flex align-items-center edificio">
+							    <font-awesome-icon :icon="['fas', 'building']" :class="[edificio.num_disponible === 0 ? 'not-available' : 'is-available', 'big']" />
+                  <div class="info">
+                      <h6 class="card-subtitle mb-2 text-muted">Nombre</h6>
+                      <p class="card-text">{{ edificio.nombre }}</p>
+                      <h6 class="card-subtitle mb-2 text-muted">Disponible</h6>
+                      <p class="card-text">{{ edificio.num_disponible }}</p>
+                      <h6 class="card-subtitle mb-2 text-muted">Disponible</h6>
+                      <p class="card-text">{{ edificio.num_ocupado }}</p>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div  v-if="isVigilant" class="card-footer d-flex justify-content-around">
+        <nuxt-link class="btn color-utec text-white" to="/vigilante/validar-entrada">Validar entrada</nuxt-link>
+        <nuxt-link class="btn color-utec text-white" to="/vigilante/validar-salida">Validar salida</nuxt-link>
+        <!-- <font-awesome-icon :icon="['fas', 'user']" /> -->
       </div>
       <div  v-if="user.reservas" class="card-footer d-flex justify-content-center">
         <nuxt-link class="btn color-utec text-white" to="/consultar-parqueo">Consultar parqueo</nuxt-link>
@@ -49,16 +71,26 @@
 </template>
 
 <script>
-//import Cabecera from "../components/Cabecera.vue"
-
 export default {
-  components: {
-    //Cabecera
+  data() {
+    return {
+      edificio: null
+    }
   },
-  mounted() {},
+  components: {},
+  mounted() {
+    this.consultarEdificio()
+  },
   methods: {
-    consultar() {
-      console.log('f')
+    consultarEdificio() {
+      if (this.user.edificios) {
+        this.$axios.get(`/edificios/${this.user.edificios[0].id}`)
+          .then((r) => {
+              if (r.status === 200) {
+                  this.edificio = r.data.edificio
+              }
+          })  
+      }
     }
   }
   
@@ -70,5 +102,17 @@ export default {
     background: #98094D;
 
   }
+  .big {
+      font-size: 100px;
+  }
+
+  .not-available {
+      color: red;
+  }
+
+  .is-available {
+      color: green;
+  }
+
 
 </style>

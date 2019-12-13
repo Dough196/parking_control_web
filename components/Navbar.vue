@@ -59,12 +59,6 @@
                     <font-awesome-icon :icon="['fas', 'building']" class="color-icon-sb" /><nuxt-link to="" class="text-white"> Nuevo edificio</nuxt-link>
                 </li>
             </template>
-            <template v-if="isVigilant">
-                <br>
-                <li class="exHover">
-                    <font-awesome-icon :icon="['fas', 'book']" class="color-icon-sb" /><nuxt-link to="" class="text-white"> Validar entrada o salida</nuxt-link>
-                </li>
-            </template>
             <!-- <template v-if="isAdmin">
             <br>
             <li class="exHover">

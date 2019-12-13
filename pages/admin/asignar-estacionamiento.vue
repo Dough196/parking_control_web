@@ -50,8 +50,6 @@
 										<button type="button" class="btn btn-primary btn-sm" @click="popHorario('lunes', index)">-</button>
 									</li>
 								</ul>
-
-
 								<h6 class="card-subtitle mb-2 text-muted mt-3">Horario del martes</h6>
 								<div class="d-flex align-items-center">
 									<div class="col-5">
